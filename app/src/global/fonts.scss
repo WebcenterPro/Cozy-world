@@ -19,3 +19,9 @@
 	url($path + 'fonts/glyphicons-halflings-regular.ttf') format('truetype'),
 	url($path + 'fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+@font-face {
+	font-family: 'Raleway';
+	src: url($path + 'fonts/Raleway-Bold.ttf'),url($path + 'fonts/Raleway-Light.ttf'),
+	url($path + 'fonts/Raleway-Regular.ttf');
+}

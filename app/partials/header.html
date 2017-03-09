@@ -1,17 +1,18 @@
-<!-- HEADER -->
+<!-- HEADERS -->
 <header class="header-top">
     <div class="container">
         <ul class="main-sections nav">
-            <li class="main-section__item active"><a href="">Межкомнатные двери</a></li>
-            <li class="main-section__item"><a href="">Входные двери</a></li>
+            <li class="main-sections__item active"><a href="">Межкомнатные двери</a></li>
+            <li class="main-sections__item"><a href="">Входные двери</a></li>
         </ul>
         <ul class="common-menu nav">
             <li class="common-menu__item"><a href="">Доставка и оплата</a></li>
             <li class="common-menu__item"><a href="">Отзывы</a></li>
             <li class="common-menu__item"><a href="">Философия компании</a></li>
             <li class="common-menu__item"><a href="">Рассрочка</a></li>
-            <li class="common-menu__item dropdown more">
-                <a class=" dropdown-toggle" type="button" id="dropdownMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <li class="common-menu__item more">
+                <a class="dropdown-toggle" id="dropdownMore" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="true">
                     Еще <span class="dots">...</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMore">
@@ -23,20 +24,79 @@
         </ul>
     </div>
 </header>
-<header class="header">
+<header class="header-middle">
     <div class="container">
-        <div class="header__logo"></div>
-        <div class="header__search">
+
+        <div class="header-middle__logo">
+            <img src="img/logo-desktop.png" alt="">
+        </div>
+        <div class="header-middle__search">
             <form class="input-group">
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control" placeholder="Поиск">
                 <div class="input-group-btn">
                     <button class="btn btn-default" type="submit">
-                        <i class="glyphicon glyphicon-search"></i>
+                        <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                 </div>
             </form>
         </div>
-        <div class="header__contacts"></div>
-        <div class="header__shops"></div>
+        <div class="header-middle__contacts">
+            <div class="number">
+                +7 (812) <span class="number__bold">640-90-05</span>
+            </div>
+            <a href="" class="call-back">Перезвоните мне</a>
+            <span class="call-hours">С 9:00 до 1:00</span>
+        </div>
+        <div class="header-middle__shops">
+            <a href="" class="status-know">Узнать статус заказа</a>
+            <a href="" class="shop-show">2 магазина в Санкт-Петерберге</a>
+        </div>
     </div>
 </header>
+<header class="header-bottom">
+    <div class="container">
+        <ul class="section-menu">
+            <li class="section-menu__item"><a href="">Каталог</a></li>
+            <li class="section-menu__item"><a href="">Наши работы</a></li>
+            <li class="section-menu__item "><a class="dropdown-toggle" id="dropdownService" data-toggle="dropdown"
+                                               aria-haspopup="true" aria-expanded="true" href="">Сервис и гарантии <i
+                    class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownService">
+                    <li>
+                        <a href="#">
+                            <span class="dropdown__title">Рассрочка</span>
+                            <span class="dropdown__desc">Первоначальный взнос от 0%до 50% на срок от 3 до 6 месяцев</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="dropdown__title">Бесплатный замер</span>
+                            <span class="dropdown__desc">Приедем в удобное время, покажем образцы и все замерим</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="dropdown__title">Монтаж</span>
+                            <span class="dropdown__desc">Опыт установок монтажников от 5 лет. Цены от 1900 до 2450</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="dropdown__title">Гарантии</span>
+                            <span class="dropdown__desc">Обрабатываем гарантийные случаисами в короткие сроки</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="section-menu__item"><a href="">Акции</a></li>
+            <li class="section-menu__item"><a href="">Контакты</a></li>
+        </ul>
+        
+        <ul class="favorites">
+            <li class="favorites__item favorite"><a href="">Избранное</a></li>
+            <li class="favorites__item comparison"><a href="">Сравнение</a></li>
+            <li class="favorites__item viewed"><a href="">Вы смотрели</a></li>
+        </ul>
+    </div>
+</header>
+

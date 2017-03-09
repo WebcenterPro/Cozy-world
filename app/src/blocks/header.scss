@@ -1,7 +1,7 @@
 .header-top {
   background-color: $gray;
   height: 40px;
-  font-size: 12px;
+  font-weight: 500;
 
   .main-sections {
     float: left;
@@ -10,37 +10,261 @@
       padding: 10px 20px;
       display: inline-block;
       a {
-        color: #fff;
         padding: 0;
-
+        color: #fff;
         &:hover {
-          background: transparent;
+          background-color: transparent;
         }
+      }
+      &.active {
+        background-color: #fff;
+        height: 40px;
+        text-transform: uppercase;
 
+        a {
+          font-weight: bold;
+          color: $gray;
+        }
       }
     }
-
   }
+
   .common-menu {
     float: right;
 
     &__item {
       padding: 10px;
       display: inline-block;
+
+      &.open {
+        background-color: transparent;
+
+        a {
+          &:hover, &:focus {
+            color: $green;
+            background: transparent;
+          }
+        }
+      }
+
       a {
         color: $light-gray;
         padding: 0;
 
-        &:hover {
+        &:hover, &:focus {
           color: $green;
+          background: transparent;
         }
-        background: transparent;
       }
-
     }
-
+    .dropdown-menu {
+      li {
+        padding: 10px 15px;
+        a {
+          color: $gray;
+        }
+      }
+    }
   }
 }
-.header{
+
+.header-middle{
   border-bottom: $gray;
+  vertical-align: middle;
+  padding: 22px 0;
+  border-bottom: 1px solid $light-gray;
+
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__search {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 330px;
+    margin-left: 5%;
+
+    .form-control {
+      padding: 13px 17px;
+      height: 40px;
+    }
+    .form-control:focus{
+      border-color: $green;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(128, 197, 82,0.6);
+    }
+    .btn {
+      border-left: none;
+      color: $green;
+      padding: 10px 15px;
+      height: 40px;
+
+      &:hover {
+        background-color: transparent;
+        border-left: none;
+      }
+    }
+  }
+
+  &__contacts {
+    display: inline-block;
+    font-weight: 100;
+    vertical-align: middle;
+    margin-left: 5%;
+
+    .number {
+      font-size: 23px;
+      color: $dark-gray;
+
+      &__bold {
+        font-weight: 900;
+      }
+    }
+    .call-back {
+      color: $green;
+      text-decoration-style: dashed;
+      text-decoration: underline;
+      font-weight: 900;
+    }
+    .call-hours {
+      font-size: 11px;
+      color: $dark-gray;
+      float: right;
+    }
+  }
+
+  &__shops {
+    vertical-align: top;
+    display: inline-block;
+    color: $green;
+    margin-left: 7%;
+
+    a {
+      font-weight: 900;
+      display: block;
+      color: $green;
+
+      &:hover {
+        color: $green;
+      }
+    }
+    .status-know{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.header-bottom {
+font-size: 1.5rem;
+
+  .section-menu{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    padding:20px 0;
+    font-family: $font-second;
+
+       &__item{
+         display: inline-block;
+         padding:0 15px;
+         font-weight: 900;
+
+         a{
+           color: $gray;
+
+           &:hover{
+             color: $green;
+             text-decoration: none;
+           }
+         }
+
+
+
+         .fa-chevron-down{
+           font-size: 10px;
+           vertical-align: middle;
+           position: relative;
+           top: -2px;
+         }
+         &:first-child{
+           padding-left: 30px;
+           position: relative;
+
+
+           &:before{
+             content: '';
+             display: block;
+             position: absolute;
+             left: 0;
+             width: 20px;
+             height: 25px;
+             background: url("../../img/catalog.png") center no-repeat;
+
+           }
+         }
+       }
+  }
+
+  .favorites{
+    display: inline-block;
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin-top:15px;
+
+    &__item{
+      font-size: 11px;
+      padding: 10px 15px;
+      padding-left: 30px;
+      display: inline-block;
+
+      a{
+        color: $dark-gray;
+        &:hover{
+          color: $green;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .favorite{
+      position: relative;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        background: url("../../img/like.png") center no-repeat;
+      }
+    }
+    .comparison{
+      position: relative;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5px;
+        width: 23px;
+        height: 18px;
+        background: url("../../img/compare.png") center no-repeat;
+      }
+    }
+    .viewed{
+      position: relative;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        background: url("../../img/view.png") center no-repeat;
+      }
+    }
+  }
 }
