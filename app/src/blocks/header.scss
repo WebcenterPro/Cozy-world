@@ -1,12 +1,45 @@
 .header-top {
-background-color: $gray;
+  background-color: $gray;
   height: 40px;
-}
-.main-sections{
-float: left;
-}
-.common-menu{
-  float: right;
+  font-size: 12px;
+
+  .main-sections {
+    float: left;
+
+    &__item {
+      padding: 10px 20px;
+      display: inline-block;
+      a {
+        color: #fff;
+        padding: 0;
+
+        &:hover {
+          background: transparent;
+        }
+
+      }
+    }
+
+  }
+  .common-menu {
+    float: right;
+
+    &__item {
+      padding: 10px;
+      display: inline-block;
+      a {
+        color: $light-gray;
+        padding: 0;
+
+        &:hover {
+          color: $green;
+        }
+        background: transparent;
+      }
+
+    }
+
+  }
 }
 .header{
   border-bottom: $gray;
