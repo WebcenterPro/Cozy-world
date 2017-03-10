@@ -12,6 +12,7 @@
       a {
         padding: 0;
         color: #fff;
+        text-transform: uppercase;
         &:hover {
           background-color: transparent;
         }
@@ -19,7 +20,7 @@
       &.active {
         background-color: #fff;
         height: 40px;
-        text-transform: uppercase;
+
 
         a {
           font-weight: bold;
