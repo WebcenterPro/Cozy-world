@@ -1,0 +1,48 @@
+.hearts{
+  background: url("../../img/green-love.png") center no-repeat;
+  background-size: contain;
+  top:0;
+  right: 24%;
+  position: absolute;
+  height:150px;
+  width: 150px;
+}
+
+.door-materials{
+  display: none;
+  padding-top: 20px;
+  .nav-tabs {
+    color: $dark-gray;
+    li{
+      a {
+        text-align: center;
+        font-size: 1.3rem;
+        color: $green;
+        display: inline-block;
+        position: relative;
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          width:100%;
+          bottom: 2px;
+          border-bottom:dashed 1px transparent;
+          border-color: inherit;
+        }
+
+        &:hover{
+          &:before{
+            display: none;
+          }
+        }
+      }
+      &.active{
+        a {
+          text-align: left;
+          color: $dark-gray;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

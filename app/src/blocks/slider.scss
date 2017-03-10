@@ -1,0 +1,200 @@
+.slider{
+
+  .fa-long-arrow-left {
+    &:hover {
+      color: $green;
+    }
+    &:before {
+      position: absolute;
+      bottom: 0;
+      font-size: 20px;
+      left: 10%;
+      z-index: 5;
+      @include screen-xs(){
+       left: 3%;
+      }
+
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+  .fa-long-arrow-right{
+    &:hover {
+      color: $green;
+    }
+    &:before {
+
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      z-index: 5;
+      font-size: 20px;
+      @include screen-xs(){
+        right: 3%;
+      }
+    }
+  }
+
+  &__text{
+    position: absolute;
+    display: block;
+    width:100%;
+    left: 6%;
+    top: 30%;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $dark-gray;
+
+    @include screen-sm(){
+      position: static;
+    }
+
+    a{
+      color: $green;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    &-huge{
+      font-size: 3rem;
+      line-height: 3rem;
+      font-family: $font-second;
+
+      margin-bottom: 10px;
+      width: 47%;
+
+      @include screen-md(){
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      @include screen-sm(){
+        width:80%;
+        margin: 0 auto;
+        line-height: 2.5rem;
+        margin-bottom: 10px;
+        margin-top: 15px;
+      }
+      @include screen-xs(){
+        width:90%;
+        font-size: 1.6rem;
+        line-height: 2rem;
+
+      }
+
+    }
+    &-small{
+      width: 35%;
+      @include screen-md(){
+        font-size: 1rem;
+      }
+      @include screen-sm(){
+        width:80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+      @include screen-xs(){
+        width:90%;
+        margin-bottom: 5px;
+
+
+      }
+    }
+  }
+  &__item{
+    position: relative;
+  }
+
+  .slick-dots{
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    position: relative;
+
+    &__link {
+      text-transform: uppercase;
+      font-family: $font-second;
+      font-weight: 700;
+      font-size: 11px;
+      color: $dark-gray;
+      @include screen-md(){
+        font-size: 9px;
+      }
+    }
+
+    &__circle{
+      width:10px;
+      height: 10px;
+      margin:5px;
+      border-radius: 50%;
+      display: block;
+      background: $light-gray;
+      &:hover{
+        background: $green;
+      }
+
+    }
+
+     li{
+       display: inline-block;
+       padding:25px 0;
+       border:solid 1px $light-gray;
+       border-left: transparent;
+       text-align: center;
+       cursor: pointer;
+
+       @include screen-md(){
+          padding:20px 0;
+        }
+       @include screen-sm(){
+         padding: 0;
+         border:none;
+         background: transparent;
+
+       }
+
+      &:first-child{
+        border-left: solid 1px $light-gray;
+        @include screen-sm(){
+
+        border-left: none;
+        }
+      }
+       &.slick-active{
+
+         background-color: $green;
+         a{
+           color: #fff;
+           background: $green;
+         }
+         @include screen-sm(){
+
+           background: transparent;
+         }
+       }
+       &:hover{
+         background-color: $green;
+         @include screen-sm(){
+
+           background: transparent;
+         }
+         a{
+           color: #fff;
+         }
+
+       }
+       a{
+         &:hover{
+           text-decoration: none;
+         }
+       }
+    }
+  }
+}
+.slick-slide img{
+  width:100%;
+}

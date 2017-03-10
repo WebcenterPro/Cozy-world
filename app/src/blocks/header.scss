@@ -38,9 +38,9 @@
       display: inline-block;
 
       &.open {
-        background-color: transparent;
-
         a {
+          background-color: transparent;
+
           &:hover, &:focus {
             color: $green;
             background: transparent;
@@ -51,6 +51,7 @@
       a {
         color: $light-gray;
         padding: 0;
+        cursor: pointer;
 
         &:hover, &:focus {
           color: $green;
@@ -78,6 +79,32 @@
   &__logo {
     display: inline-block;
     vertical-align: middle;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+   @include screen-lg(){
+     max-width: 150px;
+   }
+
+    .logo-home{
+      width:19%;
+      img{
+        width:100%;
+        display: inline-block;
+      }
+    }
+    .logo-cozy{
+      width: 78%;
+      img{
+        width:100%;
+        display: inline-block;
+      }
+
+      @include screen-lg(){
+       margin-left:8%;
+      }
+    }
+
   }
 
   &__search {
@@ -86,9 +113,25 @@
     max-width: 330px;
     margin-left: 5%;
 
+    @include screen-lg(){
+      max-width: 250px;
+    }
+
+    @include screen-md(){
+      margin-left: 9%;
+    }
+    @include screen-sm(){
+     max-width: 50px;
+      margin:0;
+      float: right;
+    }
     .form-control {
       padding: 13px 17px;
       height: 40px;
+
+      @include screen-sm(){
+       display: none;
+      }
     }
     .form-control:focus{
       border-color: $green;
@@ -99,7 +142,16 @@
       color: $green;
       padding: 10px 15px;
       height: 40px;
+      @include screen-sm(){
 
+        border:none;
+        margin-top: 5px;
+
+        &:active,&:focus{
+          box-shadow: none;
+          background: transparent;
+        }
+      }
       &:hover {
         background-color: transparent;
         border-left: none;
@@ -113,8 +165,12 @@
     vertical-align: middle;
     margin-left: 5%;
 
+    @include screen-md(){
+      margin-left: 9%;
+    }
+
     .number {
-      font-size: 23px;
+      font-size: 1.8rem;
       color: $dark-gray;
 
       &__bold {
@@ -123,8 +179,7 @@
     }
     .call-back {
       color: $green;
-      text-decoration-style: dashed;
-      text-decoration: underline;
+      position: relative;
       font-weight: 900;
     }
     .call-hours {
@@ -138,7 +193,14 @@
     vertical-align: top;
     display: inline-block;
     color: $green;
-    margin-left: 7%;
+    margin-left: 6%;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+
+    @include screen-md(){
+      display: none;
+    }
 
     a {
       font-weight: 900;
@@ -153,10 +215,61 @@
       margin-bottom: 10px;
     }
   }
+
+  &__favorite{
+    float: right;
+    display: none;
+    vertical-align: middle;
+    margin-top: 5px;
+    a{
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url("../../img/like.png") center no-repeat;
+    }
+    @include screen-sm(){
+      display: inline-block;
+    }
+  }
+
+  &__menu{
+    display: none;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    background-color: $green;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    &:before{
+     position: relative;
+      top: 13px;
+      font-size: 18px;
+      display: block;
+      content: '\f0c9';
+      font-family: 'FontAwesome';
+    }
+    @include screen-sm(){
+      display: inline-block;
+
+    }
+
+
+  }
+  @include screen-sm(){
+    padding: 0;
+    border: none;
+
+  }
 }
 
 .header-bottom {
 font-size: 1.5rem;
+
+  @include screen-lg(){
+    font-size: 1.2rem;
+  }
+
 
   .section-menu{
     list-style: none;
@@ -167,16 +280,59 @@ font-size: 1.5rem;
 
        &__item{
          display: inline-block;
-         padding:0 15px;
+         padding:0;
          font-weight: 900;
+
+         &.open{
+           a{
+             background-color: transparent;
+           }
+
+           .service-dropdown{
+             display: flex;
+             flex-wrap: wrap;
+             min-width: 600px;
+
+             @include screen-md(){
+               min-width: 400px;
+             }
+
+             &__item{
+               width:50%;
+               padding: 15px 30px;
+
+               &__title{
+                 display: block;
+               }
+
+               &__desc{
+                 display: flex;
+                 flex-wrap: wrap;
+                 width:100%;
+                 font-size: 1rem;
+                 color: $font-gray;
+                 font-family: $font-main;
+                 font-weight: 400;
+
+               }
+             }
+           }
+         }
 
          a{
            color: $gray;
+           padding: 0 15px;
 
            &:hover{
+             background-color: transparent;
              color: $green;
              text-decoration: none;
            }
+         }
+
+         &:hover{
+
+
          }
 
 
@@ -200,7 +356,12 @@ font-size: 1.5rem;
              width: 20px;
              height: 25px;
              background: url("../../img/catalog.png") center no-repeat;
+             background-size: contain;
 
+             @include screen-md(){
+              left: 5px;
+               height:22px;
+             }
            }
          }
        }
@@ -212,15 +373,31 @@ font-size: 1.5rem;
     list-style: none;
     padding: 0;
     margin-top:15px;
+    @include screen-md(){
+      margin-top: 7px;
+    }
 
     &__item{
       font-size: 11px;
-      padding: 10px 15px;
-      padding-left: 30px;
+      padding:0;
       display: inline-block;
 
+      @include screen-md(){
+        display: block;
+
+      }
+
+
       a{
+        padding: 10px 15px;
+        padding-left: 30px;
         color: $dark-gray;
+
+        @include  screen-lg(){
+          padding: 7px 5px;
+          padding-left: 30px;
+        }
+
         &:hover{
           color: $green;
           text-decoration: none;
@@ -237,8 +414,13 @@ font-size: 1.5rem;
         position: absolute;
         left: 5px;
         width: 20px;
-        height: 20px;
+        height: 17px;
         background: url("../../img/like.png") center no-repeat;
+        background-size: contain;
+
+        @include screen-md(){
+          width: 15px;
+        }
       }
     }
     .comparison{
@@ -250,8 +432,12 @@ font-size: 1.5rem;
         position: absolute;
         left: 5px;
         width: 23px;
-        height: 18px;
+        height: 16px;
         background: url("../../img/compare.png") center no-repeat;
+        background-size: contain;
+        @include screen-md(){
+          width: 18px;
+        }
       }
     }
     .viewed{
@@ -263,8 +449,13 @@ font-size: 1.5rem;
         position: absolute;
         left: 5px;
         width: 20px;
-        height: 20px;
+        height: 17px;
         background: url("../../img/view.png") center no-repeat;
+        background-size: contain;
+        @include screen-md(){
+          width: 15px;
+          height: 15px;
+        }
       }
     }
   }

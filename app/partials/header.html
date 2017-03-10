@@ -1,5 +1,5 @@
 <!-- HEADERS -->
-<header class="header-top">
+<header class="header-top hidden-xs">
     <div class="container">
         <ul class="main-sections nav">
             <li class="main-sections__item active"><a href="">Межкомнатные двери</a></li>
@@ -8,7 +8,7 @@
         <ul class="common-menu nav">
             <li class="common-menu__item"><a href="">Доставка и оплата</a></li>
             <li class="common-menu__item"><a href="">Отзывы</a></li>
-            <li class="common-menu__item"><a href="">Философия компании</a></li>
+            <li class="common-menu__item philosophy"><a href="">Философия компании</a></li>
             <li class="common-menu__item"><a href="">Рассрочка</a></li>
             <li class="common-menu__item more">
                 <a class="dropdown-toggle" id="dropdownMore" data-toggle="dropdown" aria-haspopup="true"
@@ -26,10 +26,18 @@
 </header>
 <header class="header-middle">
     <div class="container">
+        <div class="header-middle__menu">
+
+        </div>
 
         <div class="header-middle__logo">
-            <img src="img/logo-desktop.png" alt="">
+            <img class="hidden-xs logo-home" src="img/logo_home.png" alt="">
+            <img class="logo-cozy" src="img/logo-mobile.png" alt="">
         </div>
+        <div class="header-middle__favorite ">
+            <a class="favorite" href=""> </a>
+        </div>
+
         <div class="header-middle__search">
             <form class="input-group">
                 <input type="text" class="form-control" placeholder="Поиск">
@@ -40,62 +48,64 @@
                 </div>
             </form>
         </div>
-        <div class="header-middle__contacts">
+        <div class="header-middle__contacts hidden-xs">
             <div class="number">
                 +7 (812) <span class="number__bold">640-90-05</span>
             </div>
-            <a href="" class="call-back">Перезвоните мне</a>
+            <a href="" class="call-back __dashed">Перезвоните мне</a>
             <span class="call-hours">С 9:00 до 1:00</span>
         </div>
-        <div class="header-middle__shops">
-            <a href="" class="status-know">Узнать статус заказа</a>
-            <a href="" class="shop-show">2 магазина в Санкт-Петерберге</a>
-        </div>
+        <ul class="header-middle__shops">
+           <li class="status-know"> <a href="" >Узнать статус заказа</a></li>
+           <li class="shop-show"> <a href="" >2 магазина в Санкт-Петерберге</a></li>
+        </ul>
+
+
     </div>
 </header>
-<header class="header-bottom">
+<header class="header-bottom hidden-xs">
     <div class="container">
-        <ul class="section-menu">
+        <ul class="section-menu nav">
             <li class="section-menu__item"><a href="">Каталог</a></li>
             <li class="section-menu__item"><a href="">Наши работы</a></li>
             <li class="section-menu__item "><a class="dropdown-toggle" id="dropdownService" data-toggle="dropdown"
                                                aria-haspopup="true" aria-expanded="true" href="">Сервис и гарантии <i
                     class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownService">
-                    <li>
+                <div class="dropdown-menu service-dropdown" aria-labelledby="dropdownService">
+                    <div class="service-dropdown__item">
                         <a href="#">
-                            <span class="dropdown__title">Рассрочка</span>
-                            <span class="dropdown__desc">Первоначальный взнос от 0%до 50% на срок от 3 до 6 месяцев</span>
+                            <span class="service-dropdown__item__title">Рассрочка</span>
+                            <span class="service-dropdown__item__desc">Первоначальный взнос от 0% до 50% на срок от 3 до 6 месяцев</span>
                         </a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="service-dropdown__item">
                         <a href="#">
-                            <span class="dropdown__title">Бесплатный замер</span>
-                            <span class="dropdown__desc">Приедем в удобное время, покажем образцы и все замерим</span>
+                            <span class="service-dropdown__item__title">Бесплатный замер</span>
+                            <span class="service-dropdown__item__desc">Приедем в удобное время, покажем образцы и все замерим</span>
                         </a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="service-dropdown__item">
                         <a href="#">
-                            <span class="dropdown__title">Монтаж</span>
-                            <span class="dropdown__desc">Опыт установок монтажников от 5 лет. Цены от 1900 до 2450</span>
+                            <span class="service-dropdown__item__title">Монтаж</span>
+                            <span class="service-dropdown__item__desc">Опыт установок монтажников от 5 лет. Цены от 1900 до 2450</span>
                         </a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="service-dropdown__item">
                         <a href="#">
-                            <span class="dropdown__title">Гарантии</span>
-                            <span class="dropdown__desc">Обрабатываем гарантийные случаисами в короткие сроки</span>
+                            <span class="service-dropdown__item__title">Гарантии</span>
+                            <span class="service-dropdown__item__desc">Обрабатываем гарантийные случаи сами в короткие сроки</span>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </li>
             <li class="section-menu__item"><a href="">Акции</a></li>
             <li class="section-menu__item"><a href="">Контакты</a></li>
         </ul>
         
         <ul class="favorites">
-            <li class="favorites__item favorite"><a href="">Избранное</a></li>
-            <li class="favorites__item comparison"><a href="">Сравнение</a></li>
-            <li class="favorites__item viewed"><a href="">Вы смотрели</a></li>
+            <li class="favorites__item "><a class="favorite" href="">Избранное</a></li>
+            <li class="favorites__item"><a class="comparison" href="">Сравнение</a></li>
+            <li class="favorites__item "><a class="viewed" href="">Вы смотрели</a></li>
         </ul>
     </div>
 </header>

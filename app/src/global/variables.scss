@@ -2,6 +2,7 @@ $color-main: initial;
 
 $green: #80c552;
 $gray: #7f7f7f;
+$font-gray: #999;
 $light-gray: #dedede;
 $dark-gray: #666666;
 $yellow: #ffbd4d;
@@ -27,22 +28,22 @@ $path: '../';
 	clear: both;
 }
 
-@mixin screen-xs($direct: 'min') {
+@mixin screen-xs($direct: 'max') {
 	@media (if($direct == 'max', 'max-width: #{$point-xs} - 1', 'min-width: #{$point-xs}')) {
 		@content;
 	}
 }
-@mixin screen-sm($direct: 'min') {
+@mixin screen-sm($direct: 'max') {
 	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
 		@content;
 	}
 }
-@mixin screen-md($direct: 'min') {
+@mixin screen-md($direct: 'max') {
 	@media (if($direct == 'max', 'max-width: #{$point-md} - 1', 'min-width: #{$point-md}')) {
 		@content;
 	}
 }
-@mixin screen-lg($direct: 'min') {
+@mixin screen-lg($direct: 'max') {
 	@media (if($direct == 'max', 'max-width: #{$point-lg} - 1', 'min-width: #{$point-lg}')) {
 		@content;
 	}
