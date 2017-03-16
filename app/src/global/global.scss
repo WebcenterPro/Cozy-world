@@ -56,9 +56,18 @@ textarea {
 		height: 40px;
 		border-radius: 50%;
 		border: solid 1px #fff;
-
+		background: url("../img/tile_banner_5_next.png") center no-repeat;
+		transition: transform 0.2s linear;
+		 &:hover{
+			 transform: scale(1.1,1.1);
+		 }
 	}
-
+  @include screen-md(){
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
 }
 .more-information{
 	font-size: 1.3rem;
@@ -72,6 +81,14 @@ textarea {
 		display: inline-block;
 		position: relative;
 		margin-right: 15px;
+
+      @include screen-xs(){
+        display: none;
+      }
+
+        &:hover{
+          cursor: pointer;
+        }
 
 		&:after{
 			content:'\f107';
@@ -95,6 +112,7 @@ textarea {
 }
 
 .__dashed{
+  position: relative;
 	&:before{
 		content: '';
 		display: block;
@@ -111,6 +129,131 @@ textarea {
 		}
 	}
 }
+
+.favorites{
+  display: inline-block;
+
+  list-style: none;
+  padding: 0;
+  margin-top:15px;
+  @include screen-md(){
+    margin-top: 7px;
+  }
+
+  &__item{
+    font-size: 11px;
+    padding:0;
+    display: inline-block;
+
+    @include screen-md(){
+      display: block;
+
+    }
+
+
+    a{
+      padding: 10px 15px;
+      padding-left: 30px;
+      color: $dark-gray;
+
+      @include  screen-lg(){
+        padding: 7px 5px;
+        padding-left: 30px;
+      }
+
+      &:hover{
+        color: $green;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .favorite{
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 20px;
+      height: 17px;
+      background: url("../../img/like.png") center no-repeat;
+      background-size: contain;
+
+      @include screen-md(){
+        width: 15px;
+      }
+    }
+  }
+  .comparison{
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 23px;
+      height: 16px;
+      background: url("../../img/compare.png") center no-repeat;
+      background-size: contain;
+      @include screen-md(){
+        width: 18px;
+      }
+    }
+  }
+  .viewed{
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 20px;
+      height: 17px;
+      background: url("../../img/view.png") center no-repeat;
+      background-size: contain;
+      @include screen-md(){
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+
+.color{
+  width:25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin: 5px;
+
+  &:hover{
+    border: 3px solid $green;
+
+  }
+
+}
+
+.btn{
+  border-radius: 0;
+  background: $green;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 900;
+  display: block;
+  font-family: $font-second;
+  color: #fff;
+  &:hover,&:focus,&:active{
+    color: #fff;
+  }
+}
+
+
 
 
 @include screen-xs(){

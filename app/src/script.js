@@ -52,11 +52,37 @@ $(document).ready(function () {
     $('.slick-dots__link').parent().css("width", 100/slidesNumber+'%');
 
 
-
+    $('.door-slider').slick({
+        arrows:true,
+        dots:false,
+        nextArrow:'<div class="prev"></div>',
+        prevArrow: '<div class="next"></div>',
+        slidesToShow: 5,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: "unslick"
+            }
+        ]
+    });
 
     $('.more-information__link').click(function () {
         $(this).toggleClass('open');
         $('.door-materials').slideToggle();
 
-    })
+    });
+
+
+    // $('.card').mouseenter(function(){
+    //     $(this).find('.hidden-block').slideDown();
+    // });
+    // $('.card').mouseleave(function(){
+    //     $(this).find('.hidden-block').slideUp();
+    // });
 });

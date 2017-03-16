@@ -1,48 +1,116 @@
-.hearts{
-  background: url("../../img/green-love.png") center no-repeat;
-  background-size: contain;
-  top:0;
-  right: 24%;
-  position: absolute;
-  height:150px;
-  width: 150px;
+.hearts {
+  position: relative;
+  //&:after {
+  //  content: '';
+  //  background: url("../../img/green-love.png") center no-repeat;
+  //  background-size: contain;
+  //  top: 0;
+  //  right: 24%;
+  //  position: absolute;
+  //  display: block;
+  //  height: 150px;
+  //  width: 150px;
+  //}
 }
 
-.door-materials{
+.door-materials {
   display: none;
   padding-top: 20px;
+  max-width: 570px;
+  margin-bottom: 20px;
+
+  .__dashed {
+    color: $green;
+  }
   .nav-tabs {
     color: $dark-gray;
-    li{
+    li {
+      padding: 10px 15px;
+
       a {
+        padding: 0;
         text-align: center;
         font-size: 1.3rem;
         color: $green;
         display: inline-block;
         position: relative;
-        &:before{
+
+        &:before {
           content: '';
           display: block;
           position: absolute;
-          width:100%;
+          width: 100%;
           bottom: 2px;
-          border-bottom:dashed 1px transparent;
-          border-color: inherit;
+          border-bottom: dashed 1px $green;
         }
 
-        &:hover{
-          &:before{
+        &:hover {
+          &:before {
             display: none;
           }
         }
       }
-      &.active{
+      &.active {
         a {
           text-align: left;
           color: $dark-gray;
           padding-left: 0;
+          &:before {
+            display: none;
+          }
         }
       }
     }
   }
+}
+
+.door-slider {
+  position: relative;
+  top: -30px;
+  background: #fff;
+  .slick-arrow {
+    position: absolute;
+    background: $light-gray;
+    color: #fff;
+    width: 30px;
+    height: 60px;
+    top: 40%;
+    z-index: 10;
+
+    &:hover{
+      background: $green;
+    }
+
+    &:before {
+      content: '\f104';
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-size: 30px;
+      top:8px;
+
+      color: #fff;
+    }
+  }
+  .next {
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    right: 0;
+    &:before {
+      right: 5px;
+      content: '\f105';
+    }
+  }
+  .prev {
+    left:0;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    &:before {
+      left: 5px;
+      content: '\f104';
+    }
+  }
+}
+
+.view-all{
+  width: 100%;
 }

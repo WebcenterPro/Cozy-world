@@ -1,0 +1,82 @@
+.card {
+
+  @include screen-sm() {
+    width: 33.33%;
+    float: left;
+  }
+
+  @include screen-xs() {
+    width:50%;
+  }
+
+
+  &-inner {
+    padding: 15px;
+    position: relative;
+    border: solid 1px $light-gray;
+  }
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+    .hidden-block {
+     visibility: visible;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+  &__img {
+    padding-bottom: 250px;
+    margin: 15px 25px;
+    margin-right: 55px;
+
+  }
+  &__colors {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    text-align: center;
+    .more-colors {
+      font-weight: 300;
+      color: #000;
+      &:hover {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+  &__title {
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #000;
+
+    margin: 10px 0;
+    &-link {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
+  }
+  &__price {
+    min-height: 45px;
+
+  }
+
+  &__old-price {
+    text-decoration: line-through;
+    color: #000;
+    font-weight: 200;
+  }
+  &__current-price {
+    color: $font-dark-gray;
+    font-size: 1.9rem;
+    font-weight: 900;
+  }
+  .hidden-block {
+    visibility: hidden;
+  }
+}
